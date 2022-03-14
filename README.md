@@ -1,2 +1,37 @@
-# votaciones
-Sistema de votaciones para la univesidad de el Salvador
+# SEUS (votaciones)
+
+App de votaciones para la Universidad de El Salvador
+
+## Install the dependencies
+
+```bash
+npm install
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
+```bash
+quasar dev
+```
+
+### Lint the files
+
+```bash
+npm run lint
+```
+
+### Format the files
+
+```bash
+npm run format
+```
+
+### Build the app for production
+
+```bash
+quasar build
+```
+
+### Customize the configuration
+
+See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
