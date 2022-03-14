@@ -1,9 +1,10 @@
 # SEUS (votaciones)
 
-App de votaciones para la Universidad de El Salvador
+Sistema de votaciones para la Universidad de El Salvador. 
+Para votar de forma segura, rápida y con los votos almacenados en una BlockChain
 
 ## Install the dependencies
-
+Primero debe asegurarse de tener instalada la version de NodeJS 12.22.1 puede emplear nvm para administrar versiones de nodejs
 ```bash
 npm install
 ```
@@ -11,27 +12,11 @@ npm install
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 
 ```bash
-quasar dev
+npx quasar dev
 ```
 
-### Lint the files
+### Desarrollado por Estudiantes de Diseño de Sistemas 1
 
-```bash
-npm run lint
-```
+Universidad de El Salvador 2022
 
-### Format the files
 
-```bash
-npm run format
-```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
