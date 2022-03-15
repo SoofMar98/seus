@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SEUS (votaciones)
 
 Sistema de votaciones para la Universidad de El Salvador. 
@@ -20,3 +21,7 @@ npx quasar dev
 Universidad de El Salvador 2022
 
 
+=======
+# S.E.U.S Sistema Electoral Universitario
+Sistema Electoral de votaciones para la univesidad de el Salvador
+>>>>>>> origin
