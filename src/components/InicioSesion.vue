@@ -4,7 +4,7 @@
     <div class="col col-12"></div>
     </div> -->
 
-    <div class="row justify-center">
+    <!-- <div class="row justify-center">
       <q-input
         v-model="correo"
         label="Correo:"
@@ -20,11 +20,15 @@
         type="password"
         style="width: 300px"
       />
-    </div>
+    </div> -->
 
     <div class="row justify-center">
-      <q-btn rounded color="primary" class="q-my-md glossy text-bold"
-        >INGRESAR</q-btn
+      <q-btn rounded class="q-my-md glossy text-bold">
+        <img
+          alt="Google logo"
+          src="~assets/google.ico"
+          style="width: 32px; height: 32px"
+        />Continuar con Google</q-btn
       >
     </div>
   </div>
