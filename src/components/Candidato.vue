@@ -18,10 +18,64 @@
       <q-separator />
 
       <q-card-actions>
-        <q-btn unelevated rounded color="primary" class="full-width">
+        <q-btn
+          unelevated
+          rounded
+          color="primary"
+          class="full-width"
+          @click="persistent = true"
+        >
           <q-icon name="how_to_vote" />
           <div>Votar</div>
         </q-btn>
+        <q-dialog
+          v-model="persistent"
+          persistent
+          transition-show="scale"
+          transition-hide="scale"
+        >
+          <q-card class="bg-white text-primary" style="width: 300px">
+            <q-card-section>
+              <q-card-section class="col-4 flex flex-center">
+                <q-img class="rounded-borders image" :src="candidato.Img_url" />
+              </q-card-section>
+              <q-card-section class="q-pt-xs">
+                <div class="text-overline">{{ candidato.partido }}</div>
+                <div class="text-h5 q-mt-sm q-mb-xs">
+                  {{ candidato.nombre }}
+                </div>
+                <div class="text-caption text-grey">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </q-card-section>
+            </q-card-section>
+
+            <q-card-section
+              class="q-pt-xs flex flex-center"
+              style="font-size: 1.5em; font-weight: 900"
+            >
+              ¿Estas seguro de tu voto?
+            </q-card-section>
+
+            <q-card-actions align="right" class="bg-white text-teal">
+              <q-btn
+                flat
+                label="Si, Confirmar"
+                v-close-popup
+                class="bg-white text-teal"
+                style="font-size: 1em; font-weight: 900"
+              />
+              <q-btn
+                flat
+                label="No, Cancelar"
+                v-close-popup
+                class="bg-red text-white"
+                style="font-size: 1em; font-weight: 900"
+              />
+            </q-card-actions>
+          </q-card>
+        </q-dialog>
       </q-card-actions>
     </q-card>
   </div>
@@ -31,6 +85,7 @@
 export default {
   data() {
     return {
+      persistent: false,
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };

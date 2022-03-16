@@ -1,15 +1,17 @@
 <template>
   <div class="flex flex-center">
-    <div class="row">
+    <div class="row justify-center q-gutter-sm">
       <div class="col-12">
         <div id="container">
           <h1>Candidatos</h1>
         </div>
-        <Candidato
-          v-for="candidato in listado"
-          :key="(candidato, index)"
-          :candidato="candidato"
-        />
+        <q-intersection transition="scale" class="example-item">
+          <Candidato
+            v-for="candidato in listado"
+            :key="(candidato, index)"
+            :candidato="candidato"
+          />
+        </q-intersection>
       </div>
     </div>
   </div>
@@ -40,6 +42,18 @@ export default {
           Img_url:
             "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wikihow.com%2Fimages%2F3%2F35%2FDraw-Realistic-People-Step-21-Version-2.jpg&f=1&nofb=1",
         },
+        {
+          nombre: "Jonathan Gomez",
+          partido: "Partido Amarillo",
+          Img_url:
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fpeople-happy-face-man-with-glasses-icon-vector-id650836204%3Fk%3D6%26m%3D650836204%26s%3D170667a%26w%3D0%26h%3DtdnMNumVvPXnjylQpAhcgmusHh6QdqTagUgFrmzYMuo%3D&f=1&nofb=1",
+        },
+        {
+          nombre: "Abigail Ruano",
+          partido: "Partido Morado",
+          Img_url:
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wikihow.com%2Fimages%2F3%2F35%2FDraw-Realistic-People-Step-21-Version-2.jpg&f=1&nofb=1",
+        },
       ],
     };
   },
@@ -59,8 +73,6 @@ export default {
   align-items: center;
 }
 
-/* mediaqueries para regular fuente */
-
 h1 {
   animation: text-shadow 1.5s ease-in-out;
   font-size: 3.8em;
@@ -72,6 +84,7 @@ h1:hover {
   animation-play-state: paused;
 }
 
+/* mediaqueries para regular fuente */
 @media (min-width: 500px) {
   h1 {
     font-size: 5em;
