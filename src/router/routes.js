@@ -12,7 +12,8 @@ const routes = [
       { path: "votar", component: () => import("pages/Votar.vue") }
     ]
   },
-
+     { path: "/desktop",
+      component: () => import("layouts/desktop.vue") },
   // Always leave this as last one,
   // but you can also remove it
   {
