@@ -58,6 +58,20 @@
         Continuar con Google</q-btn
       >
     </div>
+
+    <div class="row justify-center">
+      <q-checkbox
+        v-model="estadoTerminos"
+        label="Acepto Terminos y Condiciones"
+        class="text-grey text-bold q-mt-lg q-mb-lg"
+      />
+    </div>
+
+    <div class="row justify-center">
+      <p>
+        ¿Ya tienes una cuenta? <a class="text-bold" href="#">Inicia Sesion.</a>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -71,6 +85,7 @@ export default defineComponent({
     return {
       correo: "",
       clave: "",
+      estadoTerminos: false,
     };
   },
 
