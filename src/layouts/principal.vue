@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          <q-btn color="primary" label="Votacion" href="#" />
+          <q-btn unelevated rounded color="primary" label="Votacion" href="#" />
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -32,32 +32,29 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <q-footer elevated class="bg-white text-white">
+      <div class="q-pa-md">
+        <div class="q-gutter-y-md">
+          <q-tabs
+            v-model="tab"
+            narrow-indicator
+            dense
+            align="justify"
+            class="text-primary"
+          >
+            <q-route-tab icon="home" label="Home" to="/" exact />
+            <q-route-tab icon="how_to_vote" label="Votar" to="/votar" exact />
+            <q-route-tab
+              icon="assessment"
+              label="Resultados"
+              to="/resultado"
+              exact
+            />
+          </q-tabs>
+        </div>
+      </div>
+    </q-footer>
   </q-layout>
-
-  <div
-    :class="`q-mt-md ${$q.screen.xl ? 'hidden' : ''}`"
-    style="top: 0; right: 8px; transform: translateY(-50%)"
-  >
-    <div class="q-mt-md">
-      <q-btn href="#">
-        <q-fab v-model="fab1" label="Inicio" color="blue" icon="home"> </q-fab>
-      </q-btn>
-    </div>
-
-    <div class="q-mt-md">
-      <q-btn href="#/votar">
-        <q-fab v-model="fab1" label="Votar" color="blue" icon="assignment">
-        </q-fab
-      ></q-btn>
-    </div>
-
-    <div class="q-mt-md">
-      <q-btn href="#/resultado">
-        <q-fab v-model="fab1" label="Resultado" color="blue" icon="timeline">
-        </q-fab
-      ></q-btn>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -68,26 +65,26 @@ const linksList = [
     title: "Registrarse",
 
     icon: "school",
-    link: "#/registrarse"
+    link: "#/registrarse",
   },
   {
     title: "Acerca de",
 
     icon: "code",
-    link: "#/acerca"
+    link: "#/acerca",
   },
   {
     title: "Como votar?",
 
     icon: "chat",
-    link: "#/comovotar"
+    link: "#/comovotar",
   },
   {
     title: "Contacto",
 
     icon: "record_voice_over",
-    link: "#/contacto"
-  }
+    link: "#/contacto",
+  },
 ];
 
 import { defineComponent, ref } from "vue";
@@ -96,7 +93,7 @@ export default defineComponent({
   name: "MainLayout",
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
   setup() {
@@ -107,8 +104,8 @@ export default defineComponent({
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
-      }
+      },
     };
-  }
+  },
 });
 </script>
