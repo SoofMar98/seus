@@ -23,12 +23,39 @@
     </div> -->
 
     <div class="row justify-center">
+      <h1 class="text-left text-bold text-h1" style="font-size: 28px">
+        Hola,
+        <p
+          class="text-left text-grey text-bold text-caption"
+          style="font-size: 28px"
+        >
+          Primero Debes Registrarse
+        </p>
+      </h1>
+    </div>
+
+    <q-separator color="dark" size="5px" inset />
+    <div class="row justify-center">
+      <h2 class="text-left text-bold text-h1" style="font-size: 28px">
+        SEUS
+        <p
+          class="text-left text-grey text-bold text-caption q-pr-xl"
+          style="font-size: 28px"
+        >
+          Sistema Electoral
+          <q-icon name="today" class="q-pl-lg" />
+        </p>
+      </h2>
+    </div>
+
+    <div class="row justify-center">
       <q-btn rounded class="q-my-md glossy text-bold">
         <img
           alt="Google logo"
           src="~assets/google.ico"
-          style="width: 32px; height: 32px"
-        />Continuar con Google</q-btn
+          style="width: 32px; height: 32px; padding: 5px"
+        />
+        Continuar con Google</q-btn
       >
     </div>
   </div>
