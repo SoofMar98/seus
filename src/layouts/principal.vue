@@ -35,13 +35,7 @@
     <q-footer elevated class="bg-white text-white">
       <div class="q-pa-md">
         <div class="q-gutter-y-md">
-          <q-tabs
-            v-model="tab"
-            narrow-indicator
-            dense
-            align="justify"
-            class="text-primary"
-          >
+          <q-tabs narrow-indicator dense align="justify" class="text-primary">
             <q-route-tab icon="home" label="Home" to="/" exact />
             <q-route-tab icon="how_to_vote" label="Votar" to="/votar" exact />
             <q-route-tab
