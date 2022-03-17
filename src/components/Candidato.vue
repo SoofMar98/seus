@@ -31,8 +31,8 @@
         <q-dialog
           v-model="persistent"
           persistent
-          transition-show="scale"
-          transition-hide="scale"
+          transition-show="jump-up"
+          transition-hide="jump-down"
         >
           <q-card class="bg-white text-primary" style="width: 300px">
             <q-card-section>
@@ -63,8 +63,9 @@
                 flat
                 label="Si, Confirmar"
                 v-close-popup
-                class="bg-white text-teal"
+                class="bg-white text-primary"
                 style="font-size: 1em; font-weight: 900"
+                @click="$router.replace('/detalleMiVoto')"
               />
               <q-btn
                 flat

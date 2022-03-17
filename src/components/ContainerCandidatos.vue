@@ -1,19 +1,30 @@
 <template>
   <div class="flex flex-center">
-    <div class="row justify-center q-gutter-sm">
-      <div class="col-12">
-        <div id="container">
-          <h1>Candidatos</h1>
+    <q-page>
+      <div class="row justify-center q-gutter-sm">
+        <div class="col-12">
+          <div id="container">
+            <h1>Candidatos</h1>
+          </div>
+          <q-intersection transition="scale" class="example-item">
+            <Candidato
+              v-for="candidato in listado"
+              :key="(candidato, index)"
+              :candidato="candidato"
+            />
+          </q-intersection>
         </div>
-        <q-intersection transition="scale" class="example-item">
-          <Candidato
-            v-for="candidato in listado"
-            :key="(candidato, index)"
-            :candidato="candidato"
-          />
-        </q-intersection>
       </div>
-    </div>
+      <q-page-sticky position="top-left" :offset="[18, 18]">
+        <q-btn
+          push
+          round
+          color="primary"
+          icon="arrow_back_ios_new"
+          @click="$router.replace('/Votar')"
+        />
+      </q-page-sticky>
+    </q-page>
   </div>
 </template>
 
