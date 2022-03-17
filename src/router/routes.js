@@ -9,17 +9,19 @@ const routes = [
       { path: "contacto", component: () => import("pages/Contacto.vue") },
       { path: "acerca", component: () => import("pages/Acerca.vue") },
       { path: "resultado", component: () => import("pages/Resultado.vue") },
-      { path: "votar", component: () => import("pages/Votar.vue") }
-    ]
+      { path: "votar", component: () => import("pages/Votar.vue") },
+    ],
   },
-     { path: "/desktop",
-      component: () => import("layouts/desktop.vue") },
+  { path: "/desktop", component: () => import("layouts/desktop.vue") },
+
+  { path: "/login", component: () => import("layouts/login.vue") },
   // Always leave this as last one,
   // but you can also remove it
+
   {
     path: "/:catchAll(.*)*",
-    component: () => import("pages/Error404.vue")
-  }
+    component: () => import("pages/Error404.vue"),
+  },
 ];
 
 export default routes;
