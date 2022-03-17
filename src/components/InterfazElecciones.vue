@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div aling="center" class="text-h2 text-grey-14 q-mb-md">
-      <p class="titulo">Elecciones Universitarias</p>
+    <div
+      aling="center"
+      class="flex flex-center text-h2 text-grey-14 q-mb-md justify-center"
+    >
+      <p class="titulo q-ml-xl">Elecciones Universitarias</p>
     </div>
     <q-card
       v-for="name in name_votaciones"
@@ -23,7 +26,7 @@
       </q-card-section>
 
       <q-card-actions align="center" class="">
-        <q-btn class="text-black">Participar</q-btn>
+        <q-btn class="text-black btn-style q-pr-sm">Participar</q-btn>
       </q-card-actions>
     </q-card>
   </div>
@@ -68,5 +71,11 @@ export default {
   display: block;
   margin-right: auto !important;
   margin-left: auto !important;
+}
+
+.btn-style {
+  border-radius: 14px;
+  min-width: 120px;
+  width: 120px;
 }
 </style>
