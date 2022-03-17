@@ -11,6 +11,7 @@ const routes = [
       { path: "resultado", component: () => import("pages/Resultado.vue") },
       { path: "votar", component: () => import("pages/Votar.vue") },
       { path: "votacionActiva", component: () => import("pages/EleccionVoto.vue") },
+      { path: "detalleMiVoto", component: () => import("src/pages/DetalleMiVoto.vue") },
     ],
   },
   { path: "/desktop", component: () => import("layouts/desktop.vue") },
