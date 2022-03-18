@@ -1,0 +1,112 @@
+<template>
+  <div class="q-pa-md q-gutter-sm w-100" style="width: 100%">
+    <div class="row">
+      <div class="col">
+        <q-btn
+          unelevated
+          color="light-green-7"
+          size="lg"
+          @click="toolbar = true"
+          class="full-width"
+          label="Login"
+        />
+      </div>
+    </div>
+
+    <q-dialog v-model="toolbar" persistent>
+      <div class="q-pa-md row items-start">
+        <q-card class="my-card" flat bordered>
+          <q-toolbar class="justify-between">
+            <q-avatar>
+              <i class="fas fa-ban" style="color: red"></i>
+            </q-avatar>
+
+            <q-item-label style="color: red"
+              >Primera verificación pendiente</q-item-label
+            >
+
+            <q-btn flat round dense icon="close" v-close-popup />
+          </q-toolbar>
+
+          <q-card-section horizontal>
+            <q-card-section class="col-5 flex flex-center">
+              <q-img
+                class="rounded-borders"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F6c%2F50%2Ffe%2F6c50fedcbd921cb0990e1abdc9c971d7.jpg&f=1&nofb=1"
+              />
+            </q-card-section>
+            <q-card-section class="q-pt-xs">
+              <div class="text-overline">Solo un paso más!</div>
+              <div class="text-h7 q-mt-sm q-mb-xs">Pepe Camote</div>
+              <div class="text-caption text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </q-card-section>
+          </q-card-section>
+          <q-card-section class="q-pt-xs">
+            <div class="text-h7 q-mt-sm q-mb-xs">Verificación</div>
+            <div class="text-overline">Telefono</div>
+
+            <q-input filled bottom-slots v-model="text" label="(503) xxxx-xxxx">
+              <template v-slot:prepend>
+                <q-icon name="phone" />
+              </template>
+              <template v-slot:append>
+                <q-icon
+                  name="close"
+                  @click="text = ''"
+                  class="cursor-pointer"
+                />
+              </template>
+            </q-input>
+            <q-btn flat class="btn-registrar" color="primary">
+              Registrar Dispositivo
+            </q-btn>
+          </q-card-section>
+          <q-card-section class="q-pt-xs">
+            <div class="text-h7 q-mt-sm q-mb-xs">Datos del dispositivo</div>
+            <div class="text-caption text-grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </q-card-section>
+
+          <q-separator />
+
+          <q-card-actions>
+            <q-btn flat icon="login"> Inicio </q-btn>
+            <q-btn flat icon="touch_app" color="secondary"> Votar </q-btn>
+          </q-card-actions>
+        </q-card>
+      </div>
+    </q-dialog>
+  </div>
+</template>
+
+<script>
+import { ref } from "vue";
+export default {
+  setup() {
+    return {
+      toolbar: ref(false),
+      lorem:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: ref(""),
+    };
+  },
+};
+</script>
+<style>
+.q-card {
+  width: 360px;
+}
+
+.my-card {
+  width: 100%;
+}
+
+.btn-registrar {
+  border: 1px solid #3a89d933;
+}
+</style>
