@@ -9,7 +9,7 @@
 
     <div class="row">
       <div class="col col-12 col-md-6">
-        <inicio-sesion />
+        <registro-usuario />
       </div>
       <div class="col col-md-6 bg-info q-mt-sm">
         <h2 class="text-white text-bold">Descubre una nueva forma de Votar</h2>
@@ -20,12 +20,12 @@
 
 <script>
 import { defineComponent } from "vue";
-import InicioSesion from "components/InicioSesion.vue";
+import RegistroUsuario from "components/RegistroUsuario.vue";
 
 export default defineComponent({
   name: "PageRegistrarse",
   components: {
-    InicioSesion,
+    RegistroUsuario,
   },
 });
 </script>

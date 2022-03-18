@@ -70,7 +70,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "InicioSesion",
+  name: "RegistroUsuario",
 
   data() {
     return {
