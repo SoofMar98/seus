@@ -20,8 +20,14 @@ const routes = [
       },
     ],
   },
-  { path: "/desktop", component: () => import("layouts/desktop.vue") },
-
+  {
+    path: "/desktop",
+    component: () => import("layouts/desktop.vue"),
+    children: [
+      { path: "admin", component: () => import("pages/admin.vue") },
+      { path: "padron", component: () => import("pages/padron.vue") },
+    ],
+  },
   {
     path: "/blockchain",
     component: () => import("layouts/blockchain.vue"),
