@@ -11,30 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          <q-btn color="primary" label="Votacion" href="#/desktop" />
-        </q-toolbar-title>
-
-        <q-separator dark vertical />
-
-        <q-btn stretch flat label href="#/desktop">
-          <q-fab v-model="fab1" label="Inicio" color="blue" icon="home">
-          </q-fab>
-        </q-btn>
-
-        <q-separator dark vertical />
-
-        <q-btn stretch flat label href="#/votar">
-          <q-fab v-model="fab1" label="Votar" color="blue" icon="assignment">
-          </q-fab>
-        </q-btn>
-
-        <q-separator dark vertical />
-
-        <q-btn stretch flat label href="#/resultado">
-          <q-fab v-model="fab1" label="Resultado" color="blue" icon="timeline">
-          </q-fab>
-        </q-btn>
+        <q-toolbar-title> SEUS Blockchain </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
@@ -61,28 +38,16 @@ import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: "Registrarse",
+    title: "Inicio",
 
-    icon: "school",
-    link: "#/registrarse",
+    icon: "home",
+    link: "#/",
   },
   {
     title: "Acerca de",
 
     icon: "code",
     link: "#/acerca",
-  },
-  {
-    title: "Como votar?",
-
-    icon: "chat",
-    link: "#/comovotar",
-  },
-  {
-    title: "Contacto",
-
-    icon: "record_voice_over",
-    link: "#/contacto",
   },
 ];
 
