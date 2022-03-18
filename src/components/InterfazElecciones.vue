@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div aling="center" class="flex flex-center text-h2 text-grey-14 q-mb-md">
-      <p class="titulo q-ml-xl q-mt-sm">Elecciones</p>
-      <p class="titulo q-ml-xl q-mt-sm">Universitarias</p>
+    <div aling="center" class="flex flex-center">
+      <h1 id="titulo">Elecciones <b />Universitarias</h1>
     </div>
+
     <q-card
       v-for="item in name_votaciones"
       :key="(item, index)"
@@ -35,7 +35,7 @@
 
         <!-- Solo se muestra si ya ha votado -->
         <q-btn
-          v-if="item.ya_voto != false "
+          v-if="item.ya_voto != false"
           push
           @click="$router.replace('/detalleMiVoto')"
           class="text-white btn-style q-pr-sm"
@@ -52,42 +52,23 @@ export default {
   data() {
     return {
       name_votaciones: [
-        {name: "Elección A" , ya_voto: true},
-        {name: "Elección B" , ya_voto: false},
-        {name: "Elección C" , ya_voto: false},
-        {name: "Elección D" , ya_voto: false},
-        {name: "Elección E" , ya_voto: false},
-        {name: "Elección F" , ya_voto: false},
-        {name: "Elección G" , ya_voto: false},
+        { name: "Elección A", ya_voto: true },
+        { name: "Elección B", ya_voto: false },
+        { name: "Elección C", ya_voto: false },
+        { name: "Elección D", ya_voto: false },
+        { name: "Elección E", ya_voto: false },
+        { name: "Elección F", ya_voto: false },
+        { name: "Elección G", ya_voto: false },
       ],
       iteraciones: ["Elección A", "Elección B", "Elección C", "Elección D"],
-      
     };
   },
 };
 </script>
 
-<style>
+<style scoped>
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
-
-/* mediaqueries para regular fuente */
-@media (min-width: 500px) {
-  h1 {
-    font-size: 5em;
-  }
-}
-
-@media (min-width: 900px) {
-  h1 {
-    font-size: 7em;
-  }
-}
-
-.titulo {
-  display: block;
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
+@import "../css/titulo.css";
 
 .btn-style {
   border-radius: 14px;
