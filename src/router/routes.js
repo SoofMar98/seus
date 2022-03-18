@@ -10,11 +10,31 @@ const routes = [
       { path: "acerca", component: () => import("pages/Acerca.vue") },
       { path: "resultado", component: () => import("pages/Resultado.vue") },
       { path: "votar", component: () => import("pages/Votar.vue") },
-      { path: "votacionActiva", component: () => import("pages/EleccionVoto.vue") },
-      { path: "detalleMiVoto", component: () => import("src/pages/DetalleMiVoto.vue") },
+      {
+        path: "votacionActiva",
+        component: () => import("pages/EleccionVoto.vue"),
+      },
+      {
+        path: "detalleMiVoto",
+        component: () => import("src/pages/DetalleMiVoto.vue"),
+      },
     ],
   },
   { path: "/desktop", component: () => import("layouts/desktop.vue") },
+
+  {
+    path: "/blockchain",
+    component: () => import("layouts/blockchain.vue"),
+    children: [
+      { path: "", component: () => import("layouts/blockchain.vue") },
+      { path: "blocks", component: () => import("pages/blocks.vue") },
+      {
+        path: "/block/:hash",
+        name: "hash",
+        component: () => import("pages/hash.vue"),
+      },
+    ],
+  },
 
   { path: "/login", component: () => import("layouts/login.vue") },
   // Always leave this as last one,
