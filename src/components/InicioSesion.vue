@@ -1,51 +1,42 @@
 <template>
   <div class="q-mx-lg">
-    <!-- <div class="row">
-    <div class="col col-12"></div>
-    </div> -->
-
-    <!-- <div class="row justify-center">
-      <q-input
-        v-model="correo"
-        label="Correo:"
-        placeholder="@ues.edu.sv"
-        style="width: 300px"
-      />
+    <div class="row justify-center q-mt-lg">
+      <p class="text-left text-bold text-h3" style="display: block">Hola,</p>
     </div>
-
     <div class="row justify-center">
-      <q-input
-        v-model="clave"
-        label="Clave:"
-        type="password"
-        style="width: 300px"
-      />
-    </div> -->
-
-    <div class="row justify-center">
-      <h1 class="text-left text-bold text-h1" style="font-size: 28px">
-        Hola,
-        <p
-          class="text-left text-grey text-bold text-caption"
-          style="font-size: 28px"
-        >
-          Primero Debes Registrarse
-        </p>
-      </h1>
+      <p class="text-left text-grey text-bold text-h6" style="display: block">
+        Primero Debes Registrarse
+      </p>
     </div>
 
     <q-separator color="dark" size="5px" inset />
-    <div class="row justify-center">
-      <h2 class="text-left text-bold text-h1" style="font-size: 28px">
-        SEUS
-        <p
-          class="text-left text-grey text-bold text-caption q-pr-xl"
-          style="font-size: 28px"
-        >
-          Sistema Electoral
-          <q-icon name="today" class="q-pl-lg" />
-        </p>
-      </h2>
+
+    <div class="row justify-center text-left">
+      <p class="text-left text-bold text-h3" style="display: block">SEUS</p>
+    </div>
+    <div class="row justify-center text-start q-mb-lg">
+      <p class="text-left text-grey text-bold text-h6" style="display: block">
+        Sistema Electoral <q-icon name="today" class="q-pl-lg" />
+      </p>
+    </div>
+
+    <div class="row justify-center q-my-lg">
+      <img
+        alt="minerva"
+        src="~assets/minerva.png"
+        style="width: 56px; height: 56px"
+        class=""
+      />
+      <p class="text-left text-bold text-h8 q-my-none">
+        Esta App es de uso exclusivo
+        <span class="text-grey text-caption" style="display: block">
+          para los estudiantes de la
+        </span>
+        <span class="text-grey text-caption" style="display: block">
+          Universidad de El Salvador
+          <q-icon name="info" class="q-pl-lg text-grey" />
+        </span>
+      </p>
     </div>
 
     <div class="row justify-center">
@@ -63,7 +54,7 @@
       <q-checkbox
         v-model="estadoTerminos"
         label="Acepto Terminos y Condiciones"
-        class="text-grey text-bold q-mt-lg q-mb-lg"
+        class="text-grey text-bold text-italic q-mt-lg q-mb-lg"
       />
     </div>
 

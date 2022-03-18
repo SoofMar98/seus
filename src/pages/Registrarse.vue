@@ -7,19 +7,14 @@
       style="width: 200px; height: 200px"
     /> -->
 
-    <inicio-sesion />
-
-    <!-- <div class="row justify-center q-my-md">
-      <a href="https://github.com/diseno2022/seus" target="_blank"
-        >Sitio web del Proyecto</a
-      >
+    <div class="row">
+      <div class="col col-12 col-md-6">
+        <inicio-sesion />
+      </div>
+      <div class="col col-md-6 bg-info q-mt-sm">
+        <h2 class="text-white text-bold">Descubre una nueva forma de Votar</h2>
+      </div>
     </div>
-
-    <div class="row justify-center q-my-md">
-      <p class="text-center q-mx-md q-my-md">
-        Bienvenidos al sistema de elecciones de la Universidad de El Salvador.
-      </p>
-    </div> -->
   </q-page>
 </template>
 
