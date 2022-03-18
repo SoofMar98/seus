@@ -34,11 +34,7 @@ const routes = [
     children: [
       { path: "", component: () => import("layouts/blockchain.vue") },
       { path: "blocks", component: () => import("pages/blocks.vue") },
-      {
-        path: "/block/:hash",
-        name: "hash",
-        component: () => import("pages/hash.vue"),
-      },
+      { path: "block", component: () => import("pages/hash.vue") },
     ],
   },
 
