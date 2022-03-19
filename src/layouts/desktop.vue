@@ -15,25 +15,25 @@
           <q-btn color="primary" label="Votacion" href="#/desktop" />
         </q-toolbar-title>
 
-
         <q-separator dark vertical />
 
         <q-btn stretch flat label href="#/desktop">
-        <q-fab v-model="fab1" label="Inicio" color="blue" icon="home"> </q-fab>
-      </q-btn>
-
-      <q-separator dark vertical />
-
-       <q-btn stretch flat label href="#/votar">
-        <q-fab v-model="fab1" label="Votar" color="blue" icon="assignment">
-        </q-fab>
+          <q-fab v-model="fab1" label="Inicio" color="blue" icon="home">
+          </q-fab>
         </q-btn>
 
-      <q-separator  dark vertical />
+        <q-separator dark vertical />
 
-        <q-btn  stretch flat label href="#/resultado">
-        <q-fab v-model="fab1" label="Resultado" color="blue" icon="timeline">
-        </q-fab>
+        <q-btn stretch flat label href="#/votar">
+          <q-fab v-model="fab1" label="Votar" color="blue" icon="assignment">
+          </q-fab>
+        </q-btn>
+
+        <q-separator dark vertical />
+
+        <q-btn stretch flat label href="#/resultado">
+          <q-fab v-model="fab1" label="Resultado" color="blue" icon="timeline">
+          </q-fab>
         </q-btn>
       </q-toolbar>
     </q-header>
@@ -54,8 +54,6 @@
       <router-view />
     </q-page-container>
   </q-layout>
-
-
 </template>
 
 <script>
@@ -66,26 +64,21 @@ const linksList = [
     title: "Registrarse",
 
     icon: "school",
-    link: "#/registrarse"
+    link: "#/registrarse",
+  },
+
+  {
+    title: "Administrar Elecciones",
+
+    icon: "school",
+    link: "#/desktop/admin",
   },
   {
-    title: "Acerca de",
+    title: "Administrar Padron",
 
-    icon: "code",
-    link: "#/acerca"
+    icon: "school",
+    link: "#/desktop/padron",
   },
-  {
-    title: "Como votar?",
-
-    icon: "chat",
-    link: "#/comovotar"
-  },
-  {
-    title: "Contacto",
-
-    icon: "record_voice_over",
-    link: "#/contacto"
-  }
 ];
 
 import { defineComponent, ref } from "vue";
@@ -94,7 +87,7 @@ export default defineComponent({
   name: "MainLayout",
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
   setup() {
@@ -105,8 +98,8 @@ export default defineComponent({
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
-      }
+      },
     };
-  }
+  },
 });
 </script>
