@@ -1,7 +1,11 @@
 <template>
-  <div >
+  <div>
+    <AlertaVerificacion ref="AlertaVerificacion"></AlertaVerificacion>
     <div aling="center" class="flex flex-center">
-      <h1 id="titulo">Elecciones <br> Universitarias</h1>
+      <h1 id="titulo">
+        Elecciones <br />
+        Universitarias
+      </h1>
     </div>
 
     <q-card
@@ -27,7 +31,7 @@
         <q-btn
           v-if="item.ya_voto != true"
           push
-          @click="$router.push('/votacionActiva')"
+          @click="showModal(item.validate, item.ya_voto)"
           class="text-white btn-style q-pr-sm"
         >
           PARTICIPAR
@@ -37,7 +41,12 @@
         <q-btn
           v-if="item.ya_voto != false"
           push
-          @click="$router.push({name: 'detalle', params: {nameVotacion: item.name}})"
+          @click="
+            $router.push({
+              name: 'detalle',
+              params: { nameVotacion: item.name },
+            })
+          "
           class="text-white btn-style q-pr-sm"
         >
           DETALLE DE MI VOTO
@@ -48,20 +57,31 @@
 </template>
 
 <script>
+import AlertaVerificacion from "./AlertaVerificacion.vue";
 export default {
+  components: { AlertaVerificacion },
   data() {
     return {
       name_votaciones: [
-        { name: "Elección A", ya_voto: true },
-        { name: "Elección B", ya_voto: false },
-        { name: "Elección C", ya_voto: false },
-        { name: "Elección D", ya_voto: false },
-        { name: "Elección E", ya_voto: false },
-        { name: "Elección F", ya_voto: false },
-        { name: "Elección G", ya_voto: false },
+        { name: "Elección A", ya_voto: true, validate: true },
+        { name: "Elección B", ya_voto: false, validate: false },
+        { name: "Elección C", ya_voto: false, validate: true },
+        { name: "Elección D", ya_voto: false, validate: true },
+        { name: "Elección E", ya_voto: false, validate: true },
+        { name: "Elección F", ya_voto: false, validate: false },
+        { name: "Elección G", ya_voto: false, validate: true },
       ],
       iteraciones: ["Elección A", "Elección B", "Elección C", "Elección D"],
     };
+  },
+  methods: {
+    showModal(validate, voto) {
+      if (validate && !voto) {
+        this.$router.push("/votacionActiva");
+        return;
+      }
+      this.$refs.AlertaVerificacion.show();
+    },
   },
 };
 </script>
