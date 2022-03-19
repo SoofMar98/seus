@@ -1,19 +1,15 @@
 <template>
-  <div class="flex flex-center">
-    <div class="row">
-      <Logueo />
-    </div>
-  </div>
+  <q-layout view="hHh lpR fFf">
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import Logueo from "components/Logueo.vue";
-
-export default defineComponent({
-  name: "PageLogueo",
-  components: {
-    Logueo,
+export default {
+  data() {
+    return {};
   },
-});
+};
 </script>

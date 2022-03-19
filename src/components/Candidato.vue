@@ -65,7 +65,7 @@
                 v-close-popup
                 class="bg-white text-primary"
                 style="font-size: 1em; font-weight: 900"
-                @click="$router.replace('/detalleMiVoto')"
+                @click="$router.replace('/home/detalleMiVoto')"
               />
               <q-btn
                 flat

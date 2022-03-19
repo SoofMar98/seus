@@ -21,7 +21,7 @@
           round
           color="primary"
           icon="arrow_back_ios_new"
-          @click="$router.replace('/Votar')"
+          @click="$router.replace('/home/Votar')"
         />
       </q-page-sticky>
     </q-page>

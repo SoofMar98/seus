@@ -39,7 +39,11 @@
     </div>
 
     <div class="row justify-center">
-      <q-btn rounded class="q-my-md glossy text-bold">
+      <q-btn
+        rounded
+        class="q-my-md glossy text-bold"
+        @click="$router.replace('/home')"
+      >
         <img
           alt="Google logo"
           src="~assets/google.ico"

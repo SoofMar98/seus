@@ -1,21 +1,25 @@
 const routes = [
   {
-    path: "/",
+    path: "/home",
     component: () => import("layouts/principal.vue"),
     children: [
-      { path: "", component: () => import("pages/Index.vue") },
-      { path: "registrarse", component: () => import("pages/Registrarse.vue") },
-      { path: "comovotar", component: () => import("pages/ComoVotar.vue") },
-      { path: "contacto", component: () => import("pages/Contacto.vue") },
-      { path: "acerca", component: () => import("pages/Acerca.vue") },
-      { path: "resultado", component: () => import("pages/Resultado.vue") },
-      { path: "votar", component: () => import("pages/Votar.vue") },
       {
-        path: "votacionActiva",
+        path: "/home/comovotar",
+        component: () => import("pages/ComoVotar.vue"),
+      },
+      { path: "/home/contacto", component: () => import("pages/Contacto.vue") },
+      { path: "/home/acerca", component: () => import("pages/Acerca.vue") },
+      {
+        path: "/home/resultado",
+        component: () => import("pages/Resultado.vue"),
+      },
+      { path: "/home/votar", component: () => import("pages/Votar.vue") },
+      {
+        path: "/home/votacionActiva",
         component: () => import("pages/EleccionVoto.vue"),
       },
       {
-        path: "detalleMiVoto", 
+        path: "/home/detalleMiVoto",
         name: "detalle",
         component: () => import("src/pages/DetalleMiVoto.vue"),
       },
@@ -25,8 +29,8 @@ const routes = [
     path: "/desktop",
     component: () => import("layouts/desktop.vue"),
     children: [
-      { path: "admin", component: () => import("pages/admin.vue") },
-      { path: "padron", component: () => import("pages/padron.vue") },
+      { path: "/desktop/admin", component: () => import("pages/admin.vue") },
+      { path: "/desktop/padron", component: () => import("pages/padron.vue") },
     ],
   },
   {
@@ -34,12 +38,22 @@ const routes = [
     component: () => import("layouts/blockchain.vue"),
     children: [
       { path: "", component: () => import("layouts/blockchain.vue") },
-      { path: "blocks", component: () => import("pages/blocks.vue") },
-      { path: "block", component: () => import("pages/hash.vue") },
+      {
+        path: "/blockchain/blocks",
+        component: () => import("pages/blocks.vue"),
+      },
+      { path: "/blockchain/block", component: () => import("pages/hash.vue") },
     ],
   },
 
-  { path: "/login", component: () => import("layouts/login.vue") },
+  {
+    path: "/",
+    component: () => import("layouts/login.vue"),
+    children: [
+      { path: "", component: () => import("pages/Registrarse.vue") },
+      { path: "/login", component: () => import("pages/Index.vue") },
+    ],
+  },
   // Always leave this as last one,
   // but you can also remove it.
 

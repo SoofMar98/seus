@@ -77,7 +77,7 @@ export default {
   methods: {
     showModal(validate, voto) {
       if (validate && !voto) {
-        this.$router.push("/votacionActiva");
+        this.$router.push("/home/votacionActiva");
         return;
       }
       this.$refs.AlertaVerificacion.show();
