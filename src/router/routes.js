@@ -15,7 +15,8 @@ const routes = [
         component: () => import("pages/EleccionVoto.vue"),
       },
       {
-        path: "detalleMiVoto",
+        path: "detalleMiVoto", 
+        name: "detalle",
         component: () => import("src/pages/DetalleMiVoto.vue"),
       },
     ],

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div aling="center" class="flex flex-center">
-      <h1 id="titulo">Elecciones <b />Universitarias</h1>
+      <h1 id="titulo">Elecciones          Universitarias</h1>
     </div>
 
     <q-card
