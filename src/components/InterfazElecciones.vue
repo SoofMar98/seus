@@ -11,7 +11,7 @@
     <q-card
       v-for="item in name_votaciones"
       :key="(item, index)"
-      class="my-card q-mb-lg"
+      class="my-card q-mb-lg card-style"
     >
       <q-card-section class="text-grey-10">
         <div align="center" class="text-h6 text-grey-14 q-mb-sm">
@@ -31,7 +31,7 @@
         <q-btn
           v-if="item.ya_voto != true"
           push
-          @click="showModal(item.validate, item.ya_voto)"
+          @click="showModal(item.validate, item.ya_voto, item.name)"
           class="text-white btn-style q-pr-sm"
         >
           PARTICIPAR
@@ -75,9 +75,9 @@ export default {
     };
   },
   methods: {
-    showModal(validate, voto) {
+    showModal(validate, voto, name) {
       if (validate && !voto) {
-        this.$router.push("/home/votacionActiva");
+        this.$router.push({name: 'eleccionVoto', params: { nameVotacion: name}});
         return;
       }
       this.$refs.AlertaVerificacion.show();
@@ -95,5 +95,11 @@ export default {
   min-width: 160px;
   width: 160px;
   background-color: #c4c4c4;
+}
+
+.card-style{
+  min-width: 380px;
+  width: 380px;
+
 }
 </style>

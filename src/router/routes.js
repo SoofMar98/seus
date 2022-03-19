@@ -16,6 +16,7 @@ const routes = [
       { path: "/home/votar", component: () => import("pages/Votar.vue") },
       {
         path: "/home/votacionActiva",
+        name: "eleccionVoto",
         component: () => import("pages/EleccionVoto.vue"),
       },
       {

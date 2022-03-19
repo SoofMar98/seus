@@ -65,7 +65,7 @@
                 v-close-popup
                 class="bg-white text-primary"
                 style="font-size: 1em; font-weight: 900"
-                @click="$router.replace('/home/detalleMiVoto')"
+                @click="$router.push({name: 'detalle' , params: {nameVotacion: this.nameVotacion}})"
               />
               <q-btn
                 flat
@@ -91,7 +91,7 @@ export default {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };
   },
-  props: ["candidato"],
+  props: ["candidato", "nameVotacion"],
 };
 </script>
 

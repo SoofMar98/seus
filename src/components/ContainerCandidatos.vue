@@ -8,6 +8,7 @@
           </div>
           <q-intersection transition="scale" class="example-item">
             <Candidato
+              :nameVotacion="nameVotacion"
               v-for="candidato in listado"
               :key="(candidato, index)"
               :candidato="candidato"
@@ -32,6 +33,9 @@
 import Candidato from "src/components/Candidato.vue";
 export default {
   components: { Candidato },
+  props: {
+    nameVotacion: String
+  },
   data() {
     return {
       listado: [
