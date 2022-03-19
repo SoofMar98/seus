@@ -11,7 +11,7 @@
 
     <q-separator color="dark" size="5px" inset />
 
-    <div class="row justify-center text-left">
+    <div class="row justify-center text-left q-mt-lg">
       <p class="text-left text-bold text-h3" style="display: block">SEUS</p>
     </div>
     <div class="row justify-center text-start q-mb-lg">
@@ -27,14 +27,13 @@
         style="width: 56px; height: 56px"
         class=""
       />
-      <p class="text-left text-bold text-h8 q-my-none">
+      <p class="text-left text-bold text-h8 q-mx-sm">
         Esta App es de uso exclusivo
-        <span class="text-grey text-caption" style="display: block">
-          para los estudiantes de la
-        </span>
-        <span class="text-grey text-caption" style="display: block">
-          Universidad de El Salvador
-          <q-icon name="info" class="q-pl-lg text-grey" />
+        <span
+          class="text-grey text-caption"
+          style="display: block; width: 200px"
+        >
+          para los estudiantes de la Universidad de El Salvador
         </span>
       </p>
     </div>
