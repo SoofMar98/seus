@@ -5,6 +5,9 @@
         <div class="col-12">
           <div id="container">
             <h1>Candidatos</h1>
+            <div class="text-overline" style="font-size: 1.3em">
+              {{ nameVotacion }}
+            </div>
           </div>
           <q-intersection transition="scale" class="example-item">
             <Candidato
@@ -34,7 +37,7 @@ import Candidato from "src/components/Candidato.vue";
 export default {
   components: { Candidato },
   props: {
-    nameVotacion: String
+    nameVotacion: String,
   },
   data() {
     return {
