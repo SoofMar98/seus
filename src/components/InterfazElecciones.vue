@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div >
     <div aling="center" class="flex flex-center">
-      <h1 id="titulo">Elecciones          Universitarias</h1>
+      <h1 id="titulo">Elecciones <br> Universitarias</h1>
     </div>
 
     <q-card
       v-for="item in name_votaciones"
       :key="(item, index)"
-      class="my-card q-mr-md q-ml-md q-mb-lg"
+      class="my-card q-mb-lg"
     >
       <q-card-section class="text-grey-10">
         <div align="center" class="text-h6 text-grey-14 q-mb-sm">
@@ -27,7 +27,7 @@
         <q-btn
           v-if="item.ya_voto != true"
           push
-          @click="$router.replace('/votacionActiva')"
+          @click="$router.push('/votacionActiva')"
           class="text-white btn-style q-pr-sm"
         >
           PARTICIPAR
@@ -37,7 +37,7 @@
         <q-btn
           v-if="item.ya_voto != false"
           push
-          @click="$router.replace('/detalleMiVoto')"
+          @click="$router.push({name: 'detalle', params: {nameVotacion: item.name}})"
           class="text-white btn-style q-pr-sm"
         >
           DETALLE DE MI VOTO
