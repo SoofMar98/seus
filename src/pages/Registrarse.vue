@@ -8,10 +8,10 @@
     /> -->
 
     <div class="row">
-      <div class="col col-12 col-md-6">
+      <div class="col col-sm-12 col-md-6">
         <registro-usuario />
       </div>
-      <div class="col col-md-6 bg-info q-mt-sm">
+      <div class="col col-md-6 gt-sm bg-info q-mt-sm">
         <h2 class="text-white text-bold">Descubre una nueva forma de Votar</h2>
       </div>
     </div>
