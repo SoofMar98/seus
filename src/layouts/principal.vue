@@ -64,7 +64,7 @@ const linksList = [
     title: "Registrarse",
 
     icon: "school",
-    link: "#/home/registrarse",
+    link: "#",
   },
   {
     title: "Acerca de",
