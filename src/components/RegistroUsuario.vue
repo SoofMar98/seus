@@ -42,7 +42,7 @@
       <q-btn
         rounded
         class="q-my-md glossy text-bold"
-        @click="$router.replace('/home')"
+        @click="$router.push('/home')"
       >
         <img
           alt="Google logo"
@@ -64,7 +64,7 @@
     <div class="row justify-center">
       <p>
         ¿Ya tienes una cuenta?
-        <a class="text-bold" href="#/login" target="_blank">Inicia Sesion.</a>
+        <a class="text-bold" href="#/login">Inicia Sesion.</a>
       </p>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="q-pt-xl">
     <div class="row justify-center q-mt-xl q-pt-xl">
-      <q-card bordered class="my-card" style="position: absolute">
+      <q-card bordered class="col my-card" style="position: absolute">
         <q-separator color="dark" class="q-mx-xs q-mt-xs" style="height: 5px" />
         <q-card-section>
           <div class="text-h6">+812</div>
@@ -13,7 +13,7 @@
 
       <q-card
         bordered
-        class="my-card"
+        class="col my-card"
         style="position: relative; bottom: 80px; left: 100px"
       >
         <q-separator color="red" class="q-mx-xs q-mt-xs" style="height: 5px" />

@@ -21,7 +21,7 @@
         </p>
       </div>
 
-      <div class="row q-mt-lg justify-center q-pt-xl">
+      <div class="row q-mt-lg justify-center q-pt-md">
         <i class="fa fa-circle q-ml-xl text-white"></i>
         <i class="fa fa-circle q-ml-xl text-white"></i>
         <i class="fa fa-circle q-ml-xl text-white"></i>
