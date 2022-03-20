@@ -16,7 +16,7 @@
     </div>
     <div class="row justify-center text-start q-mb-lg">
       <p class="text-left text-grey text-bold text-h6" style="display: block">
-        Sistema Electoral <q-icon name="today" class="q-pl-lg" />
+        Sistema Electoral <q-icon name="inventory" class="q-pl-lg" />
       </p>
     </div>
 
