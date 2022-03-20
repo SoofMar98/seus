@@ -3,6 +3,18 @@
     <q-breadcrumbs-el label="Inicio" icon="home" />
     <q-breadcrumbs-el label="Blockchain" icon="widgets" />
     <q-breadcrumbs-el label="Bloques" />
+    <q-breadcrumbs-el label="Bloque" />
   </q-breadcrumbs>
-  <h1>HASH</h1>
+  <tabla-bloque></tabla-bloque>
 </template>
+
+<script>
+import TablaBloque from "src/components/TablaBloque.vue";
+export default {
+  components: { TablaBloque },
+  props: {},
+  data() {
+    return {};
+  },
+};
+</script>
