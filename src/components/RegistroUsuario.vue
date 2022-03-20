@@ -5,7 +5,7 @@
     </div>
     <div class="row justify-center">
       <p class="text-left text-grey text-bold text-h6" style="display: block">
-        Primero Debes Registrarse
+        Primero Debes Registrarte
       </p>
     </div>
 
@@ -63,7 +63,8 @@
 
     <div class="row justify-center">
       <p>
-        ¿Ya tienes una cuenta? <a class="text-bold" href="#">Inicia Sesion.</a>
+        ¿Ya tienes una cuenta?
+        <a class="text-bold" href="#/login" target="_blank">Inicia Sesion.</a>
       </p>
     </div>
   </div>
