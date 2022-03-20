@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="q-pa-md">
-      <div class="q-gutter-y-md column" style="max-width: 500px">
+      <div class="q-gutter-y-md column" style="max-width: 600px">
         <q-input
           color="blue-12"
           v-model="text"
@@ -12,9 +12,22 @@
           </template>
         </q-input>
       </div>
+      <br />
+      <q-card class="my-card">
+        <q-card-section>
+          <h4>Bloque: {{ bloque }}</h4>
+          <q-card class="my-card">
+            <q-card-section>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              molestias corporis voluptatum voluptatibus possimus! Tenetur cum
+              sed aliquid aut vero iure amet laborum, at neque deserunt quaerat
+              nisi eos asperiores!
+            </q-card-section>
+          </q-card>
+        </q-card-section>
+      </q-card>
     </div>
     <div class="q-pa-md">
-      <h4>Bloque: xyz</h4>
       <q-table
         title="Transacciones del Bloque"
         :rows="rows"
@@ -107,6 +120,11 @@ export default {
     return {
       columns,
       rows,
+    };
+  },
+  data() {
+    return {
+      bloque: 111,
     };
   },
 };
