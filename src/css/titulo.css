@@ -1,15 +1,9 @@
 #titulo {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-
   animation: text-shadow 1.5s ease-in-out;
   font-size: 3.8em;
   font-weight: 900;
   line-height: 1;
+  text-align: center;
 }
 
 #titulo:hover {
@@ -26,7 +20,7 @@
 
 @media (min-width: 900px) {
   #titulo {
-    font-size: 7em;
+    font-size: 6em;
   }
 }
 

@@ -21,8 +21,7 @@
         <q-btn
           unelevated
           rounded
-          color="primary"
-          class="full-width"
+          class="full-width btn-style"
           @click="persistent = true"
         >
           <q-icon name="how_to_vote" />
@@ -65,7 +64,12 @@
                 v-close-popup
                 class="bg-white text-primary"
                 style="font-size: 1em; font-weight: 900"
-                @click="$router.push({name: 'detalle' , params: {nameVotacion: this.nameVotacion}})"
+                @click="
+                  $router.push({
+                    name: 'detalle',
+                    params: { nameVotacion: this.nameVotacion },
+                  })
+                "
               />
               <q-btn
                 flat
@@ -102,5 +106,12 @@ export default {
 
 .image {
   max-height: 250px;
+}
+.btn-style {
+  border-radius: 14px;
+  min-width: 160px;
+  width: 80%;
+  background-color: rgb(6, 99, 206);
+  color: white;
 }
 </style>

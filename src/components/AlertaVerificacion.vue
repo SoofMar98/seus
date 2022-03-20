@@ -29,7 +29,12 @@
             label="Back"
             icon="arrow_left"
           />
-          <q-btn color="secondary" label="Verificar" icon="login" />
+          <q-btn
+            color="primary"
+            label="Verificar"
+            icon="login"
+            @click="$router.replace('/home')"
+          />
         </q-card-actions>
       </q-card>
     </q-dialog>
