@@ -17,13 +17,18 @@
       <div class="q-pa-md row items-start">
         <q-card class="my-card" flat bordered>
           <q-toolbar class="justify-between">
-            <q-avatar>
+            <q-avatar v-if="!showAccess">
               <i class="fas fa-ban" style="color: red"></i>
             </q-avatar>
-
-            <q-item-label style="color: red"
-              >Primera verificación pendiente</q-item-label
-            >
+            <q-item-label style="color: red" v-if="!showAccess">
+              Primera verificación pendiente
+            </q-item-label>
+            <q-avatar v-if="showAccess">
+              <i class="fas fa-check-circle" style="color: green"></i>
+            </q-avatar>
+            <q-item-label v-if="showAccess" style="color: green">
+              Primera verificación exitosa
+            </q-item-label>
 
             <q-btn flat round dense icon="close" v-close-popup />
           </q-toolbar>
@@ -46,23 +51,59 @@
           </q-card-section>
           <q-card-section class="q-pt-xs">
             <div class="text-h7 q-mt-sm q-mb-xs">Verificación</div>
-            <div class="text-overline">Telefono</div>
 
-            <q-input filled bottom-slots v-model="text" label="(503) xxxx-xxxx">
-              <template v-slot:prepend>
-                <q-icon name="phone" />
-              </template>
-              <template v-slot:append>
-                <q-icon
-                  name="close"
-                  @click="text = ''"
-                  class="cursor-pointer"
-                />
-              </template>
-            </q-input>
-            <q-btn flat class="btn-registrar" color="primary">
-              Registrar Dispositivo
-            </q-btn>
+            <div v-if="!showValidate">
+              <div class="text-overline">Telefono</div>
+              <q-input
+                filled
+                bottom-slots
+                v-model="text"
+                label="(503) xxxx-xxxx"
+              >
+                <template v-slot:prepend>
+                  <q-icon name="phone" />
+                </template>
+                <template v-slot:append>
+                  <q-icon
+                    name="close"
+                    @click="text = ''"
+                    class="cursor-pointer"
+                  />
+                </template>
+              </q-input>
+              <q-btn
+                flat
+                class="btn-registrar"
+                color="primary"
+                @click="validar()"
+              >
+                Registrar Dispositivo
+              </q-btn>
+            </div>
+            <div v-if="showValidate">
+              <div class="text-overline">Ingrese el código enviado por SMS</div>
+
+              <q-input filled bottom-slots v-model="text" label="****">
+                <template v-slot:prepend>
+                  <q-icon name="vpn_key" />
+                </template>
+                <template v-slot:append>
+                  <q-icon
+                    name="close"
+                    @click="text = ''"
+                    class="cursor-pointer"
+                  />
+                </template>
+              </q-input>
+              <q-btn
+                flat
+                class="btn-registrar"
+                color="primary"
+                @click="acceder()"
+              >
+                Validar código
+              </q-btn>
+            </div>
           </q-card-section>
           <q-card-section class="q-pt-xs">
             <div class="text-h7 q-mt-sm q-mb-xs">Datos del dispositivo</div>
@@ -74,7 +115,7 @@
 
           <q-separator />
 
-          <q-card-actions>
+          <q-card-actions v-if="showAccess">
             <q-btn flat icon="login"> Inicio </q-btn>
             <q-btn flat icon="touch_app" color="secondary"> Votar </q-btn>
           </q-card-actions>
@@ -93,6 +134,16 @@ export default {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       text: ref(""),
+      showValidate: ref(false),
+      showAccess: ref(false),
+
+      validar() {
+        this.showValidate = true;
+      },
+
+      acceder() {
+        this.showAccess = true;
+      },
     };
   },
 };
